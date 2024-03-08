@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float flapStrength = 10.0f;
     private void Start()
     {
+        //Get the Rigidbody2D and Animator components from the Player object
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -16,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //If the player presses the Jump button, flap and trigger the flap animation
         if (Input.GetButtonDown("Jump"))
         {
             Flap();
@@ -25,12 +25,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flap()
     {
+        //Set the velocity of the Rigidbody2D to a new Vector2 with the y component set to the flapStrength
         rb.velocity = new Vector2(0, 0);
         rb.velocity = new Vector2(0, rb.velocity.y + flapStrength);
     }
 
     private void SetDefaultSprite()
     {
+        //Trigger the default animation after the flap animation has finished
         anim.SetTrigger("default");
     }
 }

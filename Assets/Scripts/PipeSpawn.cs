@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeSpawn : MonoBehaviour
@@ -13,11 +11,13 @@ public class PipeSpawn : MonoBehaviour
     [SerializeField] private float gap = 14.5f;
     void Start()
     {
+        //Invoke the Spawn method after a small delay and repeat it at a fixed rate
         InvokeRepeating(nameof(Spawn), spawnDelay, spawnRate);
     }
 
     private void Spawn()
     {
+        //Spawn the top and bottom pipes with a randomized gap in between
         float num = Random.Range(-1f, 2f);
         float bottomPipeY = transform.position.y + num;
         Vector3 bottomPipePosition = new(transform.position.x, bottomPipeY, transform.position.z);

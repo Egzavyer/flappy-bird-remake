@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaySFX : MonoBehaviour
@@ -11,6 +9,7 @@ public class PlaySFX : MonoBehaviour
 
     private void Start()
     {
+        //Get the AudioSource components from the PointSoundPlayer and DeathSoundPlayer objects
         pointPlayer = GameObject.Find("PointSoundPlayer");
         pointSound = pointPlayer.GetComponent<AudioSource>();
 
@@ -20,11 +19,13 @@ public class PlaySFX : MonoBehaviour
 
     public void PlayPoint()
     {
+        //Play the point sound
         pointSound.Play();
     }
 
     public void PlayDeath()
     {
+        //Play the death sound
         deathSound.Play();
     }
 }
