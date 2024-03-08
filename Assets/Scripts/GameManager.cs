@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static int score = 0;
+    public static int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +17,13 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
     public void GameOver()
     {
-        score = 0;
+        if (score > PlayerPrefs.GetInt("score"))
+        {
+            PlayerPrefs.SetInt("score", score);
+            PlayerPrefs.Save();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
