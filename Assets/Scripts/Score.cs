@@ -5,7 +5,14 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
+    private TextMeshProUGUI scoreText;
+    public GameObject canvas;
+
+    private void Start()
+    {
+        canvas = GameObject.Find("Canvas");
+        scoreText = canvas.GetComponentInChildren<TextMeshProUGUI>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
