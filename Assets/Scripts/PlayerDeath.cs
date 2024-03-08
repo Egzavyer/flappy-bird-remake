@@ -10,9 +10,13 @@ public class PlayerDeath : MonoBehaviour
     public GameObject bottomPipe;
     private PlayerMovement playerMovementScript;
     private BoxCollider2D coll;
+
+    private PlaySFX soundPlayer;
     private void Start()
     {
         gameManagerScript = gameManager.GetComponent<GameManager>();
+
+        soundPlayer = GetComponent<PlaySFX>();
 
         playerMovementScript = GetComponent<PlayerMovement>();
         playerMovementScript.enabled = true;
@@ -25,6 +29,7 @@ public class PlayerDeath : MonoBehaviour
     {
         playerMovementScript.enabled = false;
         coll.enabled = false;
+        soundPlayer.PlayDeath();
         StartCoroutine(EndGameCoroutine());
     }
 

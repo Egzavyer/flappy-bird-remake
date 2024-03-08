@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6746008618825512259}
   - component: {fileID: 5027471379779916946}
   - component: {fileID: 7392509453351215826}
+  - component: {fileID: 1397411976052649609}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -201,7 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f383c85f90fd14789fbe617f299b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
 --- !u!95 &7392509453351215826
 Animator:
   serializedVersion: 5
@@ -223,3 +223,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1397411976052649609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335841136491782826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4ee5ebd57c0c142810f64e30fd16d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointSound: {fileID: 7584490507200593870, guid: 6ff8cbd1c5e86784a8178aaf21cf4f02, type: 3}
+  deathSound: {fileID: 4477579079401015790, guid: c76a7dcd171866f41bb02c117f4a4a09, type: 3}
