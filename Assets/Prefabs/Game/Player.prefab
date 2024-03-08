@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 216384984048491315, guid: 142d457ebb0dcb842ace53582c6fe0bb, type: 3}
+  bottomPipe: {fileID: 2365214657613919696, guid: a8107f2f3f9de284e80ff8d62dc6f903, type: 3}
 --- !u!114 &5027471379779916946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f383c85f90fd14789fbe617f299b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!95 &7392509453351215826
 Animator:
   serializedVersion: 5

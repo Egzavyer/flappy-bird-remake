@@ -6,7 +6,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     private TextMeshProUGUI scoreText;
-    public GameObject canvas;
+    private GameObject canvas;
 
     private void Start()
     {

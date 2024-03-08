@@ -8,7 +8,7 @@ public class PipeSpawn : MonoBehaviour
     public GameObject bottomPipe;
 
     [Header("Spawn Variables")]
-    [SerializeField] private float spawnDelay = 2f;
+    [SerializeField] private float spawnDelay = 1f;
     [SerializeField] private float spawnRate = 1f;
     [SerializeField] private float gap = 14.5f;
     void Start()
